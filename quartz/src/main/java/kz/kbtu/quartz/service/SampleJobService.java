@@ -16,7 +16,7 @@ public class SampleJobService {
 
     public void executeSampleJob() {
 
-        logger.info("The second_job has begun...");
+
         try {
             Thread.sleep(EXECUTION_TIME);
         } catch (InterruptedException e) {

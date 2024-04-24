@@ -58,6 +58,7 @@ public class QrtzScheduler {
                               SchedulerFactoryBean factory) throws SchedulerException {
         logger.debug("Getting a handle to the Scheduler");
         Scheduler scheduler = factory.getScheduler();
+        
 
         scheduler.scheduleJob(job, trigger);
         scheduler.scheduleJob(secondJobDetail,secondJobTrigger);
