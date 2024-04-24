@@ -32,6 +32,7 @@ public class QrtzScheduler {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
+
     @Autowired
     private ApplicationContext applicationContext;
 
@@ -130,4 +131,7 @@ public class QrtzScheduler {
                 .build();
 
     }
+
+
+
 }
