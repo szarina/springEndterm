@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
-public class SampleJobService {
+public class SecondJobService {
     public static final long EXECUTION_TIME = 5000L;
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     private AtomicInteger count = new AtomicInteger();
 
-    public void executeSampleJob() {
+    public void executeSecondJob() {
 
         logger.info("The second_job has begun...");
         try {
@@ -26,6 +26,8 @@ public class SampleJobService {
             logger.info("Sample job has finished...");
         }
     }
+
+
 
     public int getNumberOfInvocations() {
         return count.get();
