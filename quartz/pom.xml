@@ -63,6 +63,30 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+
+<!--		gatling-->
+		<dependency>
+			<groupId>io.gatling</groupId>
+			<artifactId>gatling-app</artifactId>
+			<version>3.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.gatling.highcharts</groupId>
+			<artifactId>gatling-charts-highcharts</artifactId>
+			<version>3.7.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+
 	</dependencies>
 
 	<build>
@@ -70,6 +94,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!--		gatling-->
+			<plugin>
+				<groupId>io.gatling</groupId>
+				<artifactId>gatling-maven-plugin</artifactId>
+				<version>4.2.9</version>
+				<configuration>
+					<simulationClass>kz.kbtu.quartz.MySimulation</simulationClass>
+				</configuration>
 			</plugin>
 
 
