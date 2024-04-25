@@ -18,7 +18,8 @@ public class JobController {
     @PostMapping("/pause")
     public String pauseJob() {
         try {
-            scheduler.pauseJob(JobKey.jobKey("Second_Job_Detail"));
+//            scheduler.pauseJob(JobKey.jobKey("Second_Job_Detail"));
+            scheduler.pauseJob(JobKey.jobKey("Qrtz_Job_Detail"));
             return "Job paused successfully";
         } catch (SchedulerException e) {
             return "Error pausing job: " + e.getMessage();
@@ -28,7 +29,9 @@ public class JobController {
     @PostMapping("/resume")
     public String resumeJob() {
         try {
-            scheduler.resumeJob(JobKey.jobKey("Second_Job_Detail"));
+            scheduler.resumeJob(JobKey.jobKey("Qrtz_Job_Detail"));
+
+//            scheduler.resumeJob(JobKey.jobKey("Second_Job_Detail"));
             return "Job resumed successfully";
         } catch (SchedulerException e) {
             return "Error resuming job: " + e.getMessage();
